@@ -1,0 +1,513 @@
+:root {
+  --cream: #f4eeda;
+  --ink: #221d16;
+  --brass: #a9803e;
+  --gold: #7a5c28;
+  --stone: #ded3b8;
+  --sage: #5b6e4f;
+  --sage-deep: #3e4a34;
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Work Sans", Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--sage);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- header ---- */
+
+.site-header {
+  border-bottom: 1px solid var(--stone);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.site-header .mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.logo-mark {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: var(--sage);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 28px;
+}
+
+.site-header nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--sage);
+}
+
+/* ---- trim (the scalloped border that runs through the site) ---- */
+
+.trim {
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='18'%3E%3Cpolygon points='0,0 18,0 9,18' fill='%23a9803e'/%3E%3Cpolygon points='18,0 36,0 27,18' fill='%235b6e4f'/%3E%3Cpolygon points='36,0 54,0 45,18' fill='%23f4eeda'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 54px 18px;
+}
+
+/* ---- hero ---- */
+
+.hero {
+  background: var(--sage);
+  color: var(--cream);
+}
+
+.hero .wrap {
+  padding: 88px 24px 72px;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(3.2rem, 10vw, 6rem);
+  margin: 0 0 18px;
+  line-height: 0.98;
+  color: var(--cream);
+}
+
+.hero p {
+  max-width: 36ch;
+  font-size: 1.2rem;
+  margin: 0 0 34px;
+  color: var(--cream);
+  opacity: 0.88;
+}
+
+.button {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--sage-deep);
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.98rem;
+  text-decoration: none;
+  padding: 14px 28px;
+  border: 1px solid var(--cream);
+}
+
+.button:hover {
+  background: var(--sage-deep);
+  color: var(--cream);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+/* ---- two-part intro ---- */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--stone);
+  border-bottom: 1px solid var(--stone);
+}
+
+.split > div {
+  padding: 48px 40px;
+}
+
+.split > div:first-child {
+  border-right: 1px solid var(--stone);
+}
+
+.split h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+}
+
+.split .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.split .casual .tag {
+  color: var(--sage);
+}
+
+.dress-icon {
+  width: 16px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 8;
+  stroke-linejoin: round;
+}
+
+/* ---- hero illustration ---- */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.dress-mark {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  justify-self: center;
+  fill: none;
+  stroke: var(--cream);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0.92;
+}
+
+
+.split p {
+  margin: 0;
+  max-width: 42ch;
+}
+
+/* ---- story block ---- */
+
+.story {
+  padding: 64px 0;
+  max-width: 60ch;
+}
+
+.story h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 0 0 16px;
+}
+
+.sprig-icon {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--sage);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.story p {
+  margin: 0 0 14px;
+}
+
+.story p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- shop list ---- */
+
+.page-hero {
+  background: var(--sage-deep);
+  color: var(--cream);
+  padding: 56px 0;
+}
+
+.page-hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  margin: 0 0 10px;
+  color: var(--cream);
+}
+
+.page-hero p {
+  margin: 0;
+  max-width: 48ch;
+  color: var(--cream);
+  opacity: 0.88;
+}
+
+.category {
+  margin-top: 48px;
+}
+
+.category:first-of-type {
+  margin-top: 56px;
+}
+
+.category h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin: 0 0 4px;
+}
+
+.category.casual h2 {
+  color: var(--sage);
+}
+
+.category-icon {
+  width: 18px;
+  height: 29px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 8;
+  stroke-linejoin: round;
+}
+
+.category .count {
+  font-size: 0.9rem;
+  color: var(--ink);
+  opacity: 0.65;
+  margin: 0 0 8px;
+}
+
+.item-list {
+  border-top: 1px solid var(--stone);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--stone);
+  border-left: 3px solid var(--gold);
+  transition: background-color 0.15s ease;
+}
+
+.item > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.category.casual .item {
+  border-left-color: var(--sage);
+}
+
+.item-art {
+  width: 64px;
+  height: 171px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid var(--stone);
+}
+
+.item:hover {
+  background-color: var(--stone);
+  background-color: color-mix(in srgb, var(--stone) 55%, transparent);
+}
+
+.item-name {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  margin: 0 0 6px;
+}
+
+.item-desc {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 0.97rem;
+}
+
+.item-price {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+/* ---- contact ---- */
+
+.contact-main {
+  padding: 88px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-card {
+  max-width: 46ch;
+  border: 1px solid var(--stone);
+  padding: 56px 48px;
+}
+
+.contact-card h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  margin: 0 0 20px;
+}
+
+.contact-card p {
+  margin: 0 0 20px;
+}
+
+.contact-card .email {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 2px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.contact-card .place {
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: var(--ink);
+  opacity: 0.7;
+}
+
+/* ---- footer ---- */
+
+.site-footer {
+  border-top: 1px solid var(--stone);
+  padding: 28px 0 40px;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink);
+  opacity: 0.7;
+}
+
+/* ---- mobile ---- */
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 18px;
+  }
+
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .site-header nav {
+    gap: 20px;
+  }
+
+  .hero .wrap {
+    padding: 56px 18px 48px;
+  }
+
+  .page-hero {
+    padding: 40px 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-grid .button {
+    margin: 0 auto;
+  }
+
+  .dress-mark {
+    max-width: 120px;
+    order: -1;
+  }
+
+  .contact-card {
+    padding: 40px 28px;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .split > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--stone);
+  }
+
+  .split > div {
+    padding: 32px 0;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .item-art {
+    width: 84px;
+    height: 224px;
+  }
+
+  .contact-main {
+    padding: 56px 0;
+  }
+}
