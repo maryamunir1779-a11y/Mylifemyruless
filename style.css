@@ -400,6 +400,39 @@ img {
   margin-top: 46px;
 }
 
+/* ---- trust badges + cta ---- */
+
+.trust {
+  padding: 70px 24px 84px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.trust-item strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.trust-item span {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+
+.trust-cta {
+  text-align: center;
+}
+
 /* ---- traditional element divider ---- */
 
 .heritage-strip {
@@ -698,6 +731,11 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -726,6 +764,14 @@ img {
   .page-hero,
   .heritage-strip {
     padding: 56px 0;
+  }
+
+  .category {
+    padding: 40px 0 10px;
+  }
+
+  .trust {
+    padding: 48px 18px 56px;
   }
 
   .grid {
